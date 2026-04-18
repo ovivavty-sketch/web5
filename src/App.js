@@ -30,6 +30,11 @@ const changeStatus = (id)=>{
 });
 setTasks (updated);};
 
+const filteredTasks = tasks.filter((task) => {
+  if (filter === "All") return true;
+  return task.status === filter;
+});
+
   return( <div>
     <input placeholder="НАзвание" value={name} onChange={(e)=>setName(e.target.value)}/>
      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
