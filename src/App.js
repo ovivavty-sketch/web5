@@ -41,6 +41,12 @@ setTasks (updated);};
       )
     )}
     </ul>
+    <select onChange={(e) => setFilter(e.target.value)}>
+  <option>All</option>
+  <option>To Do</option>
+  <option>In Progress</option>
+  <option>Done</option>
+</select>
      <button onClick={() => changeStatus(task.id)}> изменить статус </button>
   </div>);
 }
