@@ -38,6 +38,8 @@ const filteredTasks = tasks.filter((task) => {
 const today = new Date().toISOString().split("T")[0];
 
   return( <div>
+    <h2>Задачи</h2>
+    <p>Сегодня: {today}</p>
     <input placeholder="НАзвание" value={name} onChange={(e)=>setName(e.target.value)}/>
      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
      <button onClick={addTask} >Добавить</button>
