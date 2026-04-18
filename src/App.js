@@ -9,7 +9,7 @@ function App() {
   return( <div>
     <input placeholder="НАзвание" value={name} onChange={(e)=>setName(e.target.value)}/>
      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-
+     <button>Добавить</button>
 
 
   </div>);
