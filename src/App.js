@@ -26,6 +26,12 @@ function App() {
      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
      <button onClick={addTask} >Добавить</button>
 
+    <ul>
+      {tasks.map((task)=>(
+        <li key ={task.id}> {task.name}| {task.date}|{task.status}</li>
+      )
+    )}
+    </ul>
 
   </div>);
 }
