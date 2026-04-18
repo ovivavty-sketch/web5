@@ -35,6 +35,8 @@ const filteredTasks = tasks.filter((task) => {
   return task.status === filter;
 });
 
+const today = new Date().toISOString().split("T")[0];
+
   return( <div>
     <input placeholder="НАзвание" value={name} onChange={(e)=>setName(e.target.value)}/>
      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
