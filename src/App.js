@@ -5,8 +5,14 @@ function App() {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [filter, setFilter] = useState("All");
-  
-  return <div></div>;
+
+  return( <div>
+    <input placeholder="НАзвание" value={name} onChange={(e)=>setName(e.target.value)}/>
+
+
+
+
+  </div>);
 }
 
 export default App;
