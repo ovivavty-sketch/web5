@@ -41,7 +41,7 @@ setTasks (updated);};
       )
     )}
     </ul>
-
+     <button onClick={() => changeStatus(task.id)}> изменить статус </button>
   </div>);
 }
 
