@@ -39,6 +39,14 @@ const getColor = (task) => {
   if (task.status === "Done") return "green";
   return "black";
 };
+const sortedTasks = [...tasks].sort((a, b) => {
+  const order = {
+    "To Do": 1,
+    "In Progress": 2,
+    "Done": 3
+  };
+  return order[a.status] - order[b.status];
+});
   return (
     <div>
       <h2>Задачи</h2>
@@ -59,7 +67,7 @@ const getColor = (task) => {
       <button onClick={addTask}>Добавить</button>
 
       <ul>
-        {tasks.map((task) => {
+        {sortedTasks.map((task) => {
           const isLate = task.date < today && task.status !== "Done";
 
           return (
